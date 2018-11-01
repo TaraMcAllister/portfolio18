@@ -1,0 +1,593 @@
+/* ---- TYPOGRAPHY AND GENERAL LAYOUT ----- */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    position: relative;
+min-height: 100%;
+max-width: 100%;
+overflow-x: hidden;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    font-family: 'Open Sans', sans-serif;
+}
+
+h1 {
+    font-size: 6em;
+    padding-bottom: 0.3em;
+    padding-left: 0.4em;
+}
+
+h2 {
+    font-size: 5em;
+    padding-top: 0.7em;
+    padding-bottom: 0.3em;
+}
+
+h3 {
+    font-size: 2.5em;
+    padding-top: 0.7em;
+    padding-bottom: 0.3em;
+}
+
+h4 {
+    font-size: 2em;
+    padding-top: 0.7em;
+    padding-bottom: 0.3em;
+}
+
+h5 {
+    font-size: 1.3em;
+    padding-top: 1em;
+    padding-bottom: 0.1em;
+}
+
+body {
+    background-color: #FFFFFF;
+    font-family: 'Raleway', sans-serif;
+    font-size: 1.2em;
+}
+
+ul {
+    padding-left: 1.3rem;
+}
+
+a {
+    color: #e24e24;
+    text-decoration: underline;
+}
+
+a .work {
+    color: #FFFFFF;
+    text-decoration: underline;
+}
+
+a:hover {
+    text-decoration: line-through;
+}
+
+.main {
+    margin-right: 10%;
+    margin-left: 10%;
+}
+
+p+p {
+    margin-top: 2%;
+}
+
+p+ul {
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+
+/*------ NAV --------- */
+
+.nav a {
+    float: left;
+    font-family: 'Open Sans', sans-serif;
+    text-align: center;
+    padding: 1.5em 1em;
+    text-decoration: none;
+    font-size: 17px;
+    color: black;
+  }
+  
+  /* Change the color of links on hover */
+  .nav a:hover {
+    color: #e24e24;
+    text-decoration: underline;
+  }
+  
+  /* Add a color to the active/current link */
+  .nav a.active {
+    text-decoration: underline;
+  }
+
+  .nav a.visited{
+    color: black;
+  }
+  
+  /* Right-aligned section inside the top navigation */
+  .nav {
+    float: right;
+  }
+
+#mono {
+    height: 3em;
+    width: 2em;
+    padding: 2em 1em 2em 1em;
+}
+
+button{
+    background-color: #e24e24;
+    color: #FFFFFF;
+    padding: 1em;
+    margin: 1.3em 0;
+    width: 15%;
+    font-size: 1em;
+    border: none;
+    border-radius: 5px;
+    text-align: center;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
+}
+
+
+  /* Change the color of links on hover */
+  .btn a:hover {
+    color: #FFFFFF;
+  }
+
+    /* Add a color to the active/current link */
+  .btn a.visited{
+    color: #FFFFFF;
+  }
+
+#btn {
+    padding-left: 2.9em;
+}
+
+a #homebtntext {
+    color: black;
+    text-decoration: none;
+}
+
+#nav {
+    text-align: right;
+}
+
+#row {
+    display: grid;
+    grid-template-columns: repeat(18, 1fr);
+}
+
+#col-1{
+    grid-column: 1 / 3;
+}
+
+#col-2{
+    grid-column: 2 / 3;
+}
+
+footer {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 4%;
+    width: 100%;
+    overflow: hidden;
+    padding-left: 0.5em;
+    font-size: 0.7em;
+    font-family: 'Raleway', sans-serif;
+    padding-bottom: 0.5em;
+}
+
+/* ---- SOCIAL ICONS ----- */
+
+.social a:hover img {
+    opacity: 0.8;
+}
+
+.social li {
+    display: inline-block;
+}
+
+.social li img {
+    width: 32px;
+}
+
+.social {
+    margin-top: 0.3em;
+    margin-bottom: 1em;
+    text-align: center;
+    margin: auto;
+}
+
+.social img {
+    width: 20%;
+    align-items: center;
+    display: block;
+    float: left;
+    margin: 1em 1em 1em 1em;
+}
+
+.social ul {
+    width: 75%;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* ----- home page -------- */
+
+#name {
+    padding-top: 0.2em;
+    padding-left: 0.4em;
+    padding-bottom: 0em;
+}
+
+#bio {
+    font-size: 1.5em;
+    max-width: 70vw;
+    padding-top: 0.5em;
+    padding-left: 2em;
+}
+
+/* ------ WORK PAGE -----*/
+  
+.workgrid {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+}
+
+.dro {
+    grid-column: 5 / 13;
+    padding: 1em;
+}
+
+.droimg {
+    height: auto;
+    width: 100%;
+}
+
+.desc {
+    padding-top: 0.1em;
+    padding-bottom: 0em;
+}
+
+.overlay:hover > .overtext {
+    opacity: 1;
+    transition: opacity .25s ease;
+}
+.overlay {
+    position: relative;
+    width: auto;
+}
+
+.overtext {
+    display: block;
+    background-color: #e24e24;
+    color: white;
+    font-size: 1.2em;
+    text-align: center;
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    transition: opacity .25s ease;
+}
+
+.casestudybtn {
+    background-color: #FFFFFF;
+    color: #000000;
+    width: 25%;
+    font-size: 0.7em;
+    font-family: 'Raleway', 'sans-serif';
+}
+  .casestudybtn:hover {
+    text-decoration: underline;
+    color: #000000;
+  }
+
+  .casestudy.visited{
+    color: #000000;
+  }
+
+.space {
+    grid-column: 1 / 8;
+    padding: 1em;
+}
+
+.spaceimg {
+    height: auto;
+    width: 100%;
+}
+
+.triple {
+    grid-column: 8 / 13;
+    padding-right: 1em;
+    padding-top: 12em;
+}
+
+.tripleimg {
+    height: auto;
+    width: 100%;
+}
+
+.branding {
+    grid-column: 1 / 9;
+    padding: 1em;
+}
+
+.brandingimg {
+    height: auto;
+    width: 100%;
+    padding-top: 0em;
+}
+
+/* ---- case study ------ */
+
+.casestudyhead {
+    padding-bottom: 0em;
+}
+
+.casestudyliner {
+    padding-top: 0em;
+    padding-left: 1.4em;
+    font-size: 2em;
+}
+
+.dro_hero {
+    width: 100%;
+    height: auto;
+    padding-top: 3%;
+}
+
+.drogrid {
+    display: grid;
+    grid-template-columns: (3, 1fr)
+}
+
+.glance {
+    display: grid;
+    text-align: center;
+    padding-top: 1em;
+    grid-template-columns: (3, 1fr);
+}
+
+.left {
+    grid-column: 1 / 2;
+}
+.middle {
+    grid-column: 2 / 3;
+}
+
+.right {
+    grid-column: 3 / 3;
+}
+
+.venn {
+    text-align: center;
+}
+
+.vennimg {
+    height: 23em;
+    width: auto;
+}
+
+.ideationpages {
+    display: grid;
+    grid-template-columns: (3, 1fr);
+}
+
+.left {
+    grid-column: 1 / 2;
+}
+.middle {
+    grid-column: 2 / 3;
+}
+
+.right {
+    grid-column: 3 / 3;
+}
+
+#ideapage {
+    height: 12em;
+    width: auto;
+    padding-top: 1em;
+}
+
+.market {
+    display: grid;
+    grid-template-columns: (2, 1fr);
+}
+
+.primeair {
+    grid-column: 1 / 1;
+}
+
+.primeairimg {
+    grid-column: 2 / 2;
+    width: 30em;
+    height: auto;
+}
+
+.aha {
+    grid-column: 2 / 2;
+}
+
+.ahaimg {
+    grid-column: 1 / 2;
+}
+
+
+.drosketches {
+    display: grid;
+    grid-template-columns: (4, 1fr);
+}
+
+.image1 {
+    grid-column: 1 / 2;
+}
+.image2 {
+    grid-column: 2 / 3;
+}
+
+.image3 {
+    grid-column: 3 / 4;
+}
+
+.image4 {
+    grid-column: 4 / 4;
+}
+
+#drosketch {
+    height: 17em;
+    width: auto;
+    padding-top: 1em;
+    padding: 0.05em;
+}
+
+.drouserflow {
+    height: 16em;
+    width: auto;
+    padding-top: 1em;
+}
+
+#uisketch {
+    height: 12em;
+    width: auto;
+    padding-top: 1em;
+}
+
+.uipages {
+    display: grid;
+    grid-template-columns: (3, 1fr);
+}
+
+#drohifi {
+    height: 43em;
+    width: auto;
+    padding-top: 1em;
+    padding-bottom: 1em;
+}
+
+.dropromo {
+    width: auto;
+    height: 35em;
+}
+
+
+/* ----- cv ------- */
+
+
+.area {
+    padding-bottom: 0.3em;
+    font-style: italic;
+}
+
+.cvh3 {
+    padding-top: 0.4em;
+    padding-bottom: 0.1em;
+}
+
+.nobullet {
+    list-style-type: none;
+    padding-left: 0em;
+}
+
+.cvbutton {
+    width: 10em;
+}
+
+.cvbio {
+    padding-top: 1em;
+}
+
+/* ----- library -------- */
+
+.libraryh {
+    padding-bottom: 0em;
+}
+
+.librarybio {
+    padding-left: 2.2em;
+    padding-top: 0em;
+}
+
+.librarygrid {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+}
+
+.technic {
+    grid-column: 1 / 5;
+    padding: 1em;
+}
+
+.technicinfo {
+    grid-column: 7 / 11;
+    padding-top: 6em;
+}
+
+.technicimg {
+    height: 36em;
+    width: auto;
+    padding-top: 1.5em;
+}
+
+.design {
+    grid-column: 5 / 12;
+    padding: 1em;
+}
+
+.designinfo {
+    grid-column: 2 / 5;
+    padding-top: 3em;
+}
+
+.designimg {
+    height: 32em;
+    width: auto;
+}
+
+.comics {
+    grid-column: 2 / 9;
+    padding: 1em;
+}
+
+.comicsinfo {
+    grid-column: 10 / 11;
+}
+
+.comicsimg {
+    height: 45em;
+    width: width;
+}
+
+.logo {
+    grid-column: 6 / 12;
+    padding: 1em;
+}
+
+.logoinfo {
+    grid-column: 2 / 6;
+    padding-top: 12em;
+}
+
+.logoimg {
+    height: 53em;
+    width: width;
+}
+
+/* ---- CSS animations -------- */
+
+
+  
